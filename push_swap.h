@@ -6,7 +6,7 @@
 /*   By: cade-oli <cade-oli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 20:08:07 by cade-oli          #+#    #+#             */
-/*   Updated: 2025/04/07 17:46:42 by cade-oli         ###   ########.fr       */
+/*   Updated: 2025/04/08 12:50:10 by cade-oli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ void			single_rotate(t_stack_node **stack,
 					t_stack_node *node,
 					int rotate_a);
 
-
 int				error_syntax(char *str_nbr);
 void			error_free(t_stack_node **a, char **argv, int splited);
 void			free_split(char **av);
@@ -63,8 +62,8 @@ void			ra(t_stack_node **a);
 void			rb(t_stack_node **b);
 void			rr(t_stack_node **a, t_stack_node **b);
 
-void			pa(t_stack_node **b, t_stack_node **a);
-void			pb(t_stack_node **a, t_stack_node **b);
+void			pa(t_stack_node **a, t_stack_node **b);
+void			pb(t_stack_node **b, t_stack_node **a);
 
 void			rra(t_stack_node **a);
 void			rrb(t_stack_node **a);

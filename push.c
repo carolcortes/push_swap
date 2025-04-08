@@ -6,13 +6,13 @@
 /*   By: cade-oli <cade-oli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 10:36:02 by cade-oli          #+#    #+#             */
-/*   Updated: 2025/04/07 11:11:07 by cade-oli         ###   ########.fr       */
+/*   Updated: 2025/04/08 13:04:23 by cade-oli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	push(t_stack_node **src, t_stack_node **dest)
+void	push(t_stack_node **dest, t_stack_node **src)
 {
 	t_stack_node	*node;
 
@@ -23,7 +23,7 @@ void	push(t_stack_node **src, t_stack_node **dest)
 	if (*src)
 		(*src)->prev = NULL;
 	node->prev = NULL;
-	if (!dest)
+	if (!(*dest))
 	{
 		*dest = node;
 		node->next = NULL;
@@ -36,14 +36,14 @@ void	push(t_stack_node **src, t_stack_node **dest)
 	}
 }
 
-void	pa(t_stack_node **b, t_stack_node **a)
+void	pa(t_stack_node **a, t_stack_node **b)
 {
-	push(b, a);
+	push(a, b);
 	write(1, "pa\n", 3);
 }
 
-void	pb(t_stack_node **a, t_stack_node **b)
+void	pb(t_stack_node **b, t_stack_node **a)
 {
-	push(a, b);
+	push(b, a);
 	write(1, "pb\n", 3);
 }

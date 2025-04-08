@@ -6,7 +6,7 @@
 /*   By: cade-oli <cade-oli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 20:49:38 by cade-oli          #+#    #+#             */
-/*   Updated: 2025/04/07 17:42:08 by cade-oli         ###   ########.fr       */
+/*   Updated: 2025/04/08 15:07:39 by cade-oli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,16 +52,16 @@ void	push_swap(t_stack_node **a, t_stack_node **b)
 
 void	move_nodes(t_stack_node **a, t_stack_node **b)
 {
-	t_stack_node	*cheapeast;
+	t_stack_node	*cheapest;
 
-	cheapeast = get_chepeast(*b);
-	if (cheapeast->above_median && cheapeast->target_node->above_median)
-		rotate_stacks(a, b, cheapeast);
-	else if (!(cheapeast->above_median)
-		&& !(cheapeast->target_node->above_median))
-		reverse_rotate_stacks(a, b, cheapeast);
-	single_rotate(b, cheapeast, 0);
-	single_rotate(a, cheapeast, 1);
+	cheapest = get_chepeast(*b);
+	if (cheapest->above_median && cheapest->target_node->above_median)
+		rotate_stacks(a, b, cheapest);
+	else if (!(cheapest->above_median)
+		&& !(cheapest->target_node->above_median))
+		reverse_rotate_stacks(a, b, cheapest);
+	single_rotate(b, cheapest, 0);
+	single_rotate(a, cheapest->target_node, 1);
 	pa(a, b);
 }
 

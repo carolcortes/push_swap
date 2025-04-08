@@ -6,7 +6,7 @@
 /*   By: cade-oli <cade-oli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 15:57:23 by cade-oli          #+#    #+#             */
-/*   Updated: 2025/04/07 17:44:55 by cade-oli         ###   ########.fr       */
+/*   Updated: 2025/04/08 14:53:22 by cade-oli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ void	init_nodes(t_stack_node *a, t_stack_node *b)
 {
 	set_position(a);
 	set_position(b);
+	set_target_node(a, b);
 	set_price(a, b);
 	set_cheapest(b);
 }
@@ -56,6 +57,7 @@ void	set_cheapest(t_stack_node *stack)
 	value = LONG_MAX;
 	while (stack)
 	{
+		stack->cheapest = 0;
 		if (stack->price < value)
 		{
 			value = stack->price;

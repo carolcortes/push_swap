@@ -6,11 +6,11 @@
 /*   By: cade-oli <cade-oli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 15:57:23 by cade-oli          #+#    #+#             */
-/*   Updated: 2025/04/08 14:53:22 by cade-oli         ###   ########.fr       */
+/*   Updated: 2025/04/09 16:25:46 by cade-oli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../inc/push_swap.h"
 
 long			ft_atol(char *str);
 void			set_position(t_stack_node *stack);
@@ -32,7 +32,7 @@ void	stack_init(t_stack_node **stack, char **av, int splited)
 		if (nbr_duplicated(*stack, (int)nbr))
 			error_free(stack, av, splited);
 		append_node(stack, (int)nbr);
-		av++;
+		i++;
 	}
 	if (splited)
 		free_split(av);

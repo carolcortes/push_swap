@@ -6,11 +6,11 @@
 /*   By: cade-oli <cade-oli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 14:34:46 by cade-oli          #+#    #+#             */
-/*   Updated: 2025/04/08 11:27:33 by cade-oli         ###   ########.fr       */
+/*   Updated: 2025/04/09 16:15:12 by cade-oli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../inc/push_swap.h"
 
 int			count_words(char *str, char separator);
 static char	*get_next_word(char *str, char separator);

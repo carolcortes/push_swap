@@ -6,11 +6,11 @@
 /*   By: cade-oli <cade-oli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 14:07:10 by cade-oli          #+#    #+#             */
-/*   Updated: 2025/04/07 17:40:07 by cade-oli         ###   ########.fr       */
+/*   Updated: 2025/04/09 11:50:51 by cade-oli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../inc/push_swap.h"
 
 void	set_price(t_stack_node *a, t_stack_node *b)
 {

@@ -6,21 +6,23 @@
 /*   By: cade-oli <cade-oli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 17:14:16 by cade-oli          #+#    #+#             */
-/*   Updated: 2025/03/20 20:15:39 by cade-oli         ###   ########.fr       */
+/*   Updated: 2025/04/09 16:32:52 by cade-oli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../inc/push_swap.h"
 
 void	free_split(char **av)
 {
 	int	i;
 
-	i = -1;
+	i = 0;
 	if (!av || !*av)
 		return ;
 	while (av[i])
 		free(av[i++]);
+	free(av[i]);
+	free((av - 1)[0]);
 	free(av - 1);
 }
 
@@ -29,7 +31,7 @@ void	free_stack(t_stack_node **stack)
 	t_stack_node	*tmp;
 	t_stack_node	*current;
 
-	if (NULL == stack)
+	if (!stack)
 		return ;
 	current = *stack;
 	while (current)

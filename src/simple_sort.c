@@ -6,11 +6,11 @@
 /*   By: cade-oli <cade-oli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 20:50:07 by cade-oli          #+#    #+#             */
-/*   Updated: 2025/04/08 13:27:56 by cade-oli         ###   ########.fr       */
+/*   Updated: 2025/04/09 11:50:51 by cade-oli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../inc/push_swap.h"
 
 void	simple_sort(t_stack_node **stack)
 {

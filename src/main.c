@@ -6,11 +6,11 @@
 /*   By: cade-oli <cade-oli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 20:07:54 by cade-oli          #+#    #+#             */
-/*   Updated: 2025/04/07 17:35:17 by cade-oli         ###   ########.fr       */
+/*   Updated: 2025/04/09 16:31:23 by cade-oli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../inc/push_swap.h"
 
 int	main(int ac, char *av[])
 {

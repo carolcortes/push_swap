@@ -1,3 +1,10 @@
 .vscode
 *.out
 *.o
+randgen
+push_swap
+lib/
+.temp/
+.build/
+imgui.ini
+checker_linux

@@ -1,48 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap.c                                             :+:      :+:    :+:   */
+/*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cade-oli <cade-oli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/20 18:55:48 by cade-oli          #+#    #+#             */
-/*   Updated: 2025/04/07 11:12:06 by cade-oli         ###   ########.fr       */
+/*   Created: 2025/04/07 10:22:57 by cade-oli          #+#    #+#             */
+/*   Updated: 2025/04/09 11:50:51 by cade-oli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../inc/push_swap.h"
 
-void	swap(t_stack_node **stack)
+void	rotate(t_stack_node **stack)
 {
-	int	len;
+	int				len;
+	t_stack_node	*last_node;
 
 	len = stack_len(*stack);
 	if (!*stack || !stack || len == 1)
 		return ;
+	last_node = find_last_node(*stack);
+	last_node->next = *stack;
 	*stack = (*stack)->next;
-	(*stack)->prev->prev = *stack;
-	(*stack)->prev->next = (*stack)->next;
-	if ((*stack)->next)
-		(*stack)->next->prev = (*stack)->prev;
-	(*stack)->next = (*stack)->prev;
 	(*stack)->prev = NULL;
+	last_node->next->prev = last_node;
+	last_node->next->next = NULL;
 }
 
-void	sa(t_stack_node **a)
+void	ra(t_stack_node **a)
 {
-	swap(a);
-	write(1, "sa\n", 3);
+	rotate(a);
+	write(1, "ra\n", 3);
 }
 
-void	sb(t_stack_node **b)
+void	rb(t_stack_node **b)
 {
-	swap(b);
-	write(1, "sb\n", 3);
+	rotate(b);
+	write(1, "rb\n", 3);
 }
 
-void	ss(t_stack_node **a, t_stack_node **b)
+void	rr(t_stack_node **a, t_stack_node **b)
 {
-	swap(a);
-	swap(b);
-	write(1, "ss\n", 3);
+	rotate(a);
+	rotate(b);
+	write(1, "rr\n", 3);
 }

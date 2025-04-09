@@ -6,11 +6,11 @@
 /*   By: cade-oli <cade-oli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 18:38:35 by cade-oli          #+#    #+#             */
-/*   Updated: 2025/04/07 16:21:37 by cade-oli         ###   ########.fr       */
+/*   Updated: 2025/04/09 11:50:51 by cade-oli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../inc/push_swap.h"
 
 t_stack_node	*find_highest(t_stack_node *stack)
 {
